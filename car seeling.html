@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pradnya Motors — Car Mall</title>
+  <meta name="description" content="Pradnya Motors - Quality pre-owned cars in Nashik. Transparent pricing & trusted service." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Basic styles (copy to separate file if you prefer) -->
+  <style>
+    :root{
+      --bg:#0f1724; --card:#fff; --muted:#6b7280; --accent:#0ea5a4;
+      --maxw:1100px;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071428 0%, #071a2a 100%); color:#111; line-height:1.45}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+    header{background:transparent;padding:18px 0;color:#fff}
+    .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-weight:800}
+    .logo .brand{font-size:18px;letter-spacing:0.6px}
+    nav{display:flex;gap:12px;align-items:center}
+    .nav-links a{color:#dbeafe;text-decoration:none;margin-right:10px}
+    .hero{display:flex;gap:28px;align-items:center;padding:36px 0;color:#fff}
+    .hero-left{flex:1}
+    .hero h1{font-size:36px;margin:8px 0 12px}
+    .hero p.lead{color:#cfe9e7;margin:0 0 18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:#042022}
+    .btn-ghost{border:1px solid rgba(255,255,255,.12);color:#fff;background:transparent}
+    .hero-right{flex:1;display:flex;justify-content:center}
+    .hero-right img{max-width:360px;border-radius:12px;box-shadow:0 6px 30px rgba(4,20,31,.6)}
+
+    /* Cards / Listings */
+    .section-title{color:#fff;margin:22px 0;font-size:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:var(--card);border-radius:12px;padding:12px;box-shadow:0 6px 20px rgba(2,6,23,.35)}
+    .card img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+    .card h3{margin:10px 0 6px;font-size:18px}
+    .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+    .price{font-weight:800;color:#0b5351}
+
+    /* Contact / Footer */
+    footer{color:#cbd5dc;padding:28px 0}
+    .contact-card{background:rgba(255,255,255,.04);padding:18px;border-radius:12px}
+    form input, form textarea{width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid rgba(255,255,255,.08);background:transparent;color:#fff}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:18px;flex-wrap:wrap;gap:12px;color:#9aa7b0}
+
+    /* responsive */
+    @media (max-width:800px){
+      .hero{flex-direction:column;text-align:center}
+      .hero-right img{max-width:280px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header style="display:flex;justify-content:space-between;align-items:center">
+      <a class="logo" href="#">
+        <img src="logo.jpg" alt="logo" width="44" height="44" style="border-radius:8px">
+        <span class="brand">PRADNYA MOTORS</span>
+      </a>
+
+      <nav>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#cars">Cars</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a href="#contact" class="btn btn-ghost" style="margin-left:12px">Get in Touch</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero" aria-label="hero">
+      <div class="hero-left">
+        <p style="color:#9fe3df;margin:0;font-weight:700">Trusted pre-owned cars — Nashik</p>
+        <h1>Find your perfect car today</h1>
+        <p class="lead">Transparent prices • Verified inspection • Easy financing options. We turn customers into happy drivers.</p>
+        <a href="#cars" class="btn btn-primary">Browse Cars</a>
+        <a href="#contact" class="btn" style="margin-left:10px">Sell Your Car</a>
+        <div style="margin-top:14px;color:#cbdfe0;font-size:13px">Call us: <a href="tel:+917588551131" style="color:#e6fffb;text-decoration:none">+91 75885 51131</a></div>
+      </div>
+
+      <div class="hero-right">
+        <img src="varna.png"  width="600" height="200"alt="car hero image">
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" style="margin-top:28px">
+      <h2 class="section-title">About Pradnya Motors</h2>
+      <div class="card" style="display:flex;gap:14px;align-items:center">
+        <img src="logo.jpg" alt="owner" width="40" height="84" style="border-radius:8px">
+        <div>
+          <h3 style="margin:0">Pradnya Vinod Shinde — Car Dealer</h3>
+          <p style="margin:6px 0;color:var(--muted)">Quality pre-owned cars with full inspection and transparent pricing. Located: Nashik - 422010.</p>
+          <a href="#cars" class="btn btn-primary" style="display:inline-block">View Inventory</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARS / LISTINGS -->
+    <section id="cars" style="margin-top:28px">
+      <h2 class="section-title">Latest Car Feed</h2>
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <img src="Swift.jpg" alt="Maruti Swift 2019">
+          <h3>Maruti Swift VXi 2019</h3>
+          <div class="meta">Manual • Petrol • 45,000 km</div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">₹4,20,000</div>
+            <div>
+              <a class="btn btn-ghost" href="#contact" style="padding:8px 10px">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <img src="i20.jpg" alt="Hyundai i20">
+          <h3>Hyundai i20 Asta 2018</h3>
+          <div class="meta">Automatic • Diesel • 60,000 km</div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">₹5,80,000</div>
+            <div><a class="btn btn-ghost" href="#contact" style="padding:8px 10px">Enquire</a></div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <img src="Honda City.jpg" alt="Honda City">
+          <h3>Honda City VX 2017</h3>
+          <div class="meta">Manual • Petrol • 72,000 km</div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">₹6,50,000</div>
+            <div><a class="btn btn-ghost" href="#contact" style="padding:8px 10px">Enquire</a></div>
+          </div>
+        </article>
+
+        <!-- Card 4 (sample) -->
+        <article class="card">
+          <img src="Toyota Innova.jpg" alt="Toyota Innova">
+          <h3>Toyota Innova 2016</h3>
+          <div class="meta">Automatic • Diesel • 1,20,000 km</div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">₹9,20,000</div>
+            <div><a class="btn btn-ghost" href="#contact" style="padding:8px 10px">Enquire</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="margin-top:28px">
+      <h2 class="section-title">Contact Us</h2>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:18px">
+        <div class="contact-card">
+          <p style="color:var(--muted);margin:0 0 12px">Want to buy or sell? Fill the form and we'll respond within 24 hours.</p>
+
+          <form id="contactForm" onsubmit="return submitForm(event)">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Email address" required />
+            <input type="tel" name="phone" placeholder="Phone (WhatsApp)" required />
+            <textarea name="message" rows="4" placeholder="Message (car details / budget)"></textarea>
+            <button type="submit" class="btn btn-primary">Send Enquiry</button>
+          </form>
+
+          <p style="font-size:13px;color:var(--muted);margin-top:10px">
+            Or call: <a href="tel:+917588551131" style="color:#e6fffb;text-decoration:none">+91 75885 51131</a>
+            • Email: <a href="mailto:vinodshinde5351@gmail.com" style="color:#e6fffb;text-decoration:none">vinodshinde5351@gmail.com</a>
+          </p>
+        </div>
+
+        <aside class="card">
+          <h3 style="margin:0 0 8px">Visit Our Office</h3>
+          <p class="meta" style="margin:0 0 12px">Jail Road Nashik Road, Nashik - 422010, Maharashtra, India</p>
+          <div style="background:#f3f7f7;padding:12px;border-radius:8px">
+            <strong>Working Hours</strong>
+            <p style="margin:6px 0 0;color:var(--muted)">Mon–Fri: 7:00 AM – 10:00 PM<br>Sat–Sun: 7:00 AM – 2:00 PM</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer style="margin-top:28px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>&copy; <strong>Pradnya Motors</strong> — All rights reserved 2025</div>
+        <div class="footer-bottom">
+          <div style="font-size:13px;color:var(--muted)">Privacy Policy • Terms & Conditions</div>
+          <div style="font-size:13px"><a href="https://www.facebook.com/vinod.shinde.712" target="_blank" style="color:#e6fffb">Facebook</a> • <a href="https://www.instagram.com/pradnyamotors1891" target="_blank" style="color:#e6fffb">Instagram</a></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Minimal JS: form handler + simple interactions -->
+  <script>
+    function submitForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = f.name.value.trim();
+      const phone = f.phone.value.trim();
+      const email = f.email.value.trim();
+      const msg = f.message.value.trim();
+      // Simple in-browser confirmation for demo. Replace with real backend endpoint.
+      alert("Thanks, " + name + ".\\nWe received your enquiry.\\nPhone: " + phone + "\\nEmail: " + email);
+      f.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
